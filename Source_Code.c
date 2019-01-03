@@ -1041,7 +1041,25 @@ int main() {
                             s.stk[s.top] = s.stk[s.top] + 1;
                         }       
                     }
-                    
+                    if (IsKeyPressed('S')){
+                        stack_full = 0;
+                        if (s.top == -1) stack_empty = 1;
+                        else {
+                            if (shootTime <= 0){
+                                s.top = s.top -1;
+                                //shoot
+                                slash.sho = true;
+                                slash.out.y = body->position.y - 12;
+                                PlaySound(punchsfx);
+                                if (right) {
+                                    slash.out.x = body->position.x + 25;
+                                } else if (!right){
+                                    slash.out.x = body->position.x - 55;
+                            }
+                                
+                            }
+                        }                        
+                    }
                     
                     if (slash.sho){
                         if (shootTime < 50){                            
@@ -1061,7 +1079,8 @@ int main() {
                             slash.out.y = 0;
                             shootTime = 0;
                         }
-                    }   
+                    }
+                    
                     
                     if (s.top == -1) {
                         pos1.x = -1000;
@@ -1586,6 +1605,9 @@ int main() {
                                 DrawTexture(power_upb, pos1.x, pos1.y, RAYWHITE);
                                 DrawTexture(power_upb, pos2.x, pos2.y, RAYWHITE);
                                 DrawTexture(power_upb, pos3.x, pos3.y, RAYWHITE);
+                                DrawText("Press any Arrow to control the Character", 10, 10, 10, GRAY);
+                                DrawText("Press 'D' to Attack", 10, 30, 10, GRAY);
+                                DrawText("Press 'S' to Release Power Up", 10, 50, 10, GRAY);
                             } break;
                         }
                     
