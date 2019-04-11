@@ -1,6 +1,5 @@
-# The Mighty Gatot Kaca
 ![](resources/img/Logo.png)
-
+# The Mighty Gatot Kaca
 ### Brief Description
 2D Platformer Game Franchise by Enveriesage Studios based on Gatot Kaca Stories using Raylib. Original License by Enveriesage Studios.
 ### Installation Guide
