@@ -13,3 +13,4 @@
 ### Note : further information about `Raylib` visit www.raylib.com.
 ### Documentation
 ![](resources/img/MainBG.png)  ![](resources/img/TS1.png)   ![](resources/img/BGAMING1.png)
+### License
